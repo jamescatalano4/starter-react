@@ -10,8 +10,12 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import config from '../webpack.config.dev';
+import mam from 'mock-api-middleware';
 
 const bundler = webpack(config);
+const mockApi = mam('/api', {
+  mockPath: './mocks/'
+});
 
 // Run Browsersync and use middleware for Hot Module Replacement
 browserSync({
@@ -23,6 +27,7 @@ browserSync({
     baseDir: 'src',
 
     middleware: [
+      mockApi,
       historyApiFallback(),
 
       webpackDevMiddleware(bundler, {

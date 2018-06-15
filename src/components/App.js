@@ -7,7 +7,7 @@ import AppHeader from './AppHeader';
 import LoginPage from './Login';
 import HomePage from './Home';
 import AboutPage from './About';
-import BlogPage from './Blog';
+import BlogContainer from './BlogContainer';
 import NotFoundPage from './NotFound';
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
         <AppHeader />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/blog" component={BlogPage} />
+          <Route path="/blog" component={BlogContainer} />
           <Route path="/about" component={AboutPage} />
           <Route path="/login" component={LoginPage} />
           <Route component={NotFoundPage} />

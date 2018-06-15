@@ -4,7 +4,9 @@ exports[`<BlogPage /> should match SnapShot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <BlogPage />,
+  Symbol(enzyme.__unrendered__): <BlogPage
+    blogs="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis varius elit. Vestibulum vel pellentesque lectus. Mauris vitae rutrum sapien, in scelerisque metus. Duis eget ullamcorper ex, non consectetur orci. Sed et diam massa. Donec nec purus ex. Nunc diam dui, tempus ut blandit nec, aliquam vitae elit."
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
